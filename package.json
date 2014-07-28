@@ -1,0 +1,9 @@
+{
+  "name": "perfect-codemirror",
+  "version": "0.0.1",
+  "author": "Cole Lawrence",
+  "private": true,
+  "dependencies": {
+    "codemirror": "latest"
+  }
+}
