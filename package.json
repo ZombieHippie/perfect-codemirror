@@ -4,6 +4,6 @@
   "author": "Cole Lawrence",
   "private": true,
   "dependencies": {
-    "codemirror": "latest"
+    "codemirror": "~4.4"
   }
 }
