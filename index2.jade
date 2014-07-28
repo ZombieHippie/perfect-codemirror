@@ -1,0 +1,30 @@
+- var cmdir = 'node_modules/codemirror/'
+head
+  title Perfect CodeMirror
+  meta(key="description" value="Styles I like to apply to my CodeMirror instances")
+  meta(key="author" value="Cole Lawrence (ZombieHippie@github.com)")
+  meta(key="repository" value="http://github.com/ZombieHippie/perfect-codemirror")
+  link(href="codemirror-modded.css" rel="stylesheet")
+  style.
+    .CodeMirror {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100% !important;
+    }
+body
+  #editor
+  footer
+    script(src="codemirror-modded.js")
+    script(src=cmdir + "mode/css/css.js")
+    script(src=cmdir + "mode/javascript/javascript.js")
+    script(src=cmdir + "mode/xml/xml.js")
+    script(src=cmdir + "mode/htmlmixed/htmlmixed.js")
+    script.
+      var content = document.documentElement.innerHTML
+      var editor = CodeMirror(document.getElementById('editor'), {
+        mode:'htmlmixed'
+      })
+      editor.setValue(content)

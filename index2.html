@@ -1,0 +1,35 @@
+
+<head>
+  <title>Perfect CodeMirror</title>
+  <meta key="description" value="Styles I like to apply to my CodeMirror instances"/>
+  <meta key="author" value="Cole Lawrence (ZombieHippie@github.com)"/>
+  <meta key="repository" value="http://github.com/ZombieHippie/perfect-codemirror"/>
+  <link href="codemirror-modded.css" rel="stylesheet"/>
+  <style>
+    .CodeMirror {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100% !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="editor"></div>
+  <footer>
+    <script src="codemirror-modded.js"></script>
+    <script src="node_modules/codemirror/mode/css/css.js"></script>
+    <script src="node_modules/codemirror/mode/javascript/javascript.js"></script>
+    <script src="node_modules/codemirror/mode/xml/xml.js"></script>
+    <script src="node_modules/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script>
+      var content = document.documentElement.innerHTML
+      var editor = CodeMirror(document.getElementById('editor'), {
+        mode:'htmlmixed'
+      })
+      editor.setValue(content)
+    </script>
+  </footer>
+</body>

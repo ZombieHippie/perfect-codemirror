@@ -71,7 +71,7 @@ body
     script(src=cmdir + "addon/edit/closebrackets.js")
     script(src=cmdir + "keymap/sublime.js")
     script(src=cmdir + "addon/selection/mark-selection.js")
-    script(src="lib/spaces-or-tabs.js")
+    script(src="extras/spaces-or-tabs.js")
     script.
       var content = document.documentElement.innerHTML
       var editor = CodeMirror(document.getElementById('editor'), {
@@ -91,7 +91,7 @@ body
         autofocus: true,
         extraKeys: {
           "Tab": checkToUseSpacesInsteadofTabs
-        },
+        }
       })
       editor.setValue(content)
   script.
